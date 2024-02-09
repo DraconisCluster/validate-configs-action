@@ -1,7 +1,7 @@
 FROM alpine:3.18
 COPY entrypoint.sh /entrypoint.sh
 RUN apk --no-cache add curl tar && \
-  curl https://github.com/Terif1/config-file-validator/releases/download/latest/validator-latest-linux-386.tar.gz \
+  curl https://github.com/Terif1/config-file-validator/releases/download/1.5.1/validator-latest-linux-386.tar.gz \
   -o /tmp/validator-v1.5.1-linux-386.tar.gz  -s -L && \
   tar -xvf /tmp/validator-v1.5.1-linux-386.tar.gz -C /tmp && \
   mv /tmp/validator /usr/local/bin && \
